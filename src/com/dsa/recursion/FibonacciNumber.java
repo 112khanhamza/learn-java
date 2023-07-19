@@ -3,9 +3,14 @@ package com.dsa.recursion;
 public class FibonacciNumber {
 
     public static void main(String[] args) {
-        int n = 4;
-        FibonacciNumber fibonacciNumber = new FibonacciNumber();
-        System.out.println(fibonacciNumber.fibonacci(n));
+//        for (int i = 0; i < 11; i++) {
+//            System.out.println(fiboFormula(i));
+//        }
+        System.out.println(fiboFormula(50));
+    }
+
+    static int fiboFormula(int n) {
+        return (int) ((Math.pow(((1 + Math.sqrt(5)) / 2), n) - Math.pow(((1 - Math.sqrt(5)) / 2), n)) / Math.sqrt(5));
     }
 
     public int fibonacci(int n) {
