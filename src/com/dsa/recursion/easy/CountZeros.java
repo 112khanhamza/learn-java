@@ -9,6 +9,7 @@ public class CountZeros {
         return helper(n, 0);
     }
 
+    // special pattern, how to pass a value to above calls
     private static int helper(int n, int c) {
         if (n == 0) {
             return c;
