@@ -2,6 +2,30 @@ package com.dsa.linkedlist;
 
 public class InterviewQuestions {
 
+    public static void main(String[] args) {
+        InterviewQuestions interviewQuestions = new InterviewQuestions();
+
+    }
+
+    // https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
+    public int getDecimalValue(ListNode head) {
+        int size = 0;
+        int ans = 0;
+        ListNode temp = head;
+        while (temp != null) {
+            size++;
+            temp = temp.next;
+        }
+
+        while (head != null) {
+            ans += head.val * Math.pow(2, size);
+            size--;
+            head = head.next;
+        }
+
+        return ans;
+    }
+
     public boolean hasCycle(ListNode head) {
         ListNode fast = head;
         ListNode slow = head;
