@@ -2,6 +2,25 @@ package com.dsa.linkedlist.practice;
 
 public class InterviewQuestions {
 
+    // https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
+    public int getDecimalValue(ListNode head) {
+        int size = 0;
+        int ans = 0;
+        ListNode temp = head;
+        while (temp != null) {
+            temp = temp.next;
+            size++;
+        }
+        temp = head;
+        while (temp != null) {
+            ans += temp.val * Math.pow(2, size);
+            size--;
+            temp = temp.next;
+        }
+
+        return ans;
+    }
+
     // https://leetcode.com/problems/reorder-list/
     public void reorderList(ListNode head) {
         if (head == null || head.next == null) {
@@ -33,7 +52,7 @@ public class InterviewQuestions {
     public boolean isPalindrome(ListNode head) {
         ListNode mid = middleNode(head);
         ListNode headSecond = reverseList(mid);
-        ListNode rereverseHead = headSecond;
+        ListNode reReverseHead = headSecond;
 
         // compare both the halfs
         while (head != null && headSecond != null) {
@@ -43,7 +62,7 @@ public class InterviewQuestions {
             head = head.next;
             headSecond = headSecond.next;
         }
-        reverseList(rereverseHead);
+        reverseList(reReverseHead);
 
         return head == null || headSecond == null;
     }
@@ -127,21 +146,32 @@ public class InterviewQuestions {
         return mid;
     }
 
+    // https://leetcode.com/problems/merge-two-sorted-lists/
     ListNode merge(ListNode list1, ListNode list2) {
-        ListNode dummyHead = new ListNode();
-        ListNode tail = dummyHead;
+        ListNode temp = new ListNode();
+        ListNode currentNode = temp;
         while (list1 != null && list2 != null) {
             if (list1.val < list2.val) {
-                tail.next = list1;
+                currentNode.next = list1;
                 list1 = list1.next;
             } else {
-                tail.next = list2;
+                currentNode.next = list2;
                 list2 = list2.next;
             }
-            tail = tail.next;
+            currentNode = currentNode.next;
         }
-        tail.next = (list1 != null) ? list1 : list2;
-        return dummyHead.next;
+
+        if (list1 != null) {
+            currentNode.next = list1;
+            list1 = list1.next;
+        }
+
+        if (list2 != null) {
+            currentNode.next = list2;
+            list2 = list2.next;
+        }
+
+        return temp.next;
     }
 
     // https://leetcode.com/problems/middle-of-the-linked-list/
