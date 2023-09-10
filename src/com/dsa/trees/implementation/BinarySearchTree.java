@@ -1,5 +1,7 @@
 package com.dsa.trees.implementation;
 
+import java.util.TreeMap;
+
 public class BinarySearchTree {
 
     private Node root;
