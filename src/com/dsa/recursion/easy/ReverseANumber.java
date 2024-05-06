@@ -3,6 +3,7 @@ package com.dsa.recursion.easy;
 public class ReverseANumber {
 
     static int sum = 0;
+
     static void reverse1(int n) {
         if (n == 0) {
             return;
