@@ -1,4 +1,4 @@
-package com.fundamentals.designpatterns.decorator.hotel;
+package com.fundamentals.headfirstdesignpatterns.decorator.hotel;
 
 public abstract class Room {
 

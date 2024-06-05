@@ -1,4 +1,4 @@
-package com.fundamentals.designpatterns.decorator;
+package com.fundamentals.headfirstdesignpatterns.decorator;
 
 public abstract class Burger {
 

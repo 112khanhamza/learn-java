@@ -1,4 +1,4 @@
-package com.fundamentals.designpatterns.builder;
+package com.fundamentals.headfirstdesignpatterns.builder;
 
 public class Driver {
     public static void main(String[] args) {

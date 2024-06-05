@@ -1,4 +1,4 @@
-package com.fundamentals.designpatterns.builder;
+package com.fundamentals.headfirstdesignpatterns.builder;
 
 import lombok.Getter;
 import lombok.Setter;
