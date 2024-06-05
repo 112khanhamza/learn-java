@@ -1,5 +1,10 @@
 package com.fundamentals.designpatterns.builder;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Dog {
     private final String gender;
     private final String breed;
@@ -13,41 +18,6 @@ public class Dog {
         this.name = builder.name;
         this.price = builder.price;
         this.age = builder.age;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public String getBreed() {
-        return breed;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    private Dog setName(String name) {
-        this.name = name;
-        return this;
-    }
-
-    private Dog setPrice(double price) {
-        this.price = price;
-        return this;
-    }
-
-    private Dog setAge(int age) {
-        this.age = age;
-        return this;
     }
 
     public static class Builder {

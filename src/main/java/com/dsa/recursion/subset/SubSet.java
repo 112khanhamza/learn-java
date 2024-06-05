@@ -7,7 +7,7 @@ import java.util.List;
 public class SubSet {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3};
-        List<List<Integer>> ans = subset(arr);
+        List<List<Integer>> ans = subsetDuplicate(arr);
         for (List<Integer> list : ans) {
             System.out.println(list);
         }
@@ -31,7 +31,7 @@ public class SubSet {
     }
 
     static List<List<Integer>> subsetDuplicate(int[] arr) {
-        Arrays.sort(arr);
+//        Arrays.sort(arr);
         List<List<Integer>> outer = new ArrayList<>();
 
         outer.add(new ArrayList<>());

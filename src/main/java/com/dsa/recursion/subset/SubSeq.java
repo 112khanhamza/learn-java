@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class SubSeq {
 
     public static void main(String[] args) {
-//        subseq("", "abc");
+        subseq("", "abc");
 //        System.out.println(subseq2("", "abc"));
 //        subseqAscii("", "abc");
-        System.out.println(subseqAsciiRet("", "abc"));
+//        System.out.println(subseqAsciiRet("", "abc"));
     }
 
     // processed, unprocessed
